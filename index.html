@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ترابط Tarabot - Strategic Partnership Proposal for Motawer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        [dir="rtl"] {
+            direction: rtl;
+            text-align: right;
+        }
+
+        [dir="ltr"] {
+            direction: ltr;
+            text-align: left;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Language Toggle */
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            background: rgba(39, 98, 212, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            overflow: hidden;
+            border: 1px solid rgba(39, 98, 212, 0.3);
+        }
+
+        .lang-btn {
+            padding: 10px 20px;
+            background: transparent;
+            border: none;
+            color: #f0f0f0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .lang-btn.active {
+            background: rgba(39, 98, 212, 0.6);
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(39, 98, 212, 0.3);
+            border-radius: 50px;
+            padding: 15px 25px;
+            overflow-x: auto;
+            max-width: 90vw;
+        }
+
+        .nav-item {
+            background: rgba(39, 98, 212, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(39, 98, 212, 0.2);
+            border-radius: 25px;
+            padding: 10px 20px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        .nav-item:hover {
+            background: rgba(39, 98, 212, 0.3);
+            border-color: rgba(39, 98, 212, 0.5);
+            transform: translateY(-2px);
+            color: #ffffff;
+        }
+
+        /* Glass Card Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(39, 98, 212, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(39, 98, 212, 0.1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(39, 98, 212, 0.5);
+            box-shadow: 0 20px 40px rgba(39, 98, 212, 0.2);
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #4a90e2, #2762d4, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            border-bottom: 3px solid #4a90e2;
+            padding-bottom: 15px;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: #4a90e2;
+            font-weight: 500;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: #cccccc;
+            margin-bottom: 60px;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding-top: 150px;
+        }
+
+        .hero-content {
+            z-index: 2;
+        }
+
+
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            background: rgba(39, 98, 212, 0.2);
+            border: 1px solid rgba(39, 98, 212, 0.3);
+            border-radius: 25px;
+            color: #f0f0f0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .tab-btn.active {
+            background: rgba(39, 98, 212, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        /* Feature Cards */
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(39, 98, 212, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(39, 98, 212, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(39, 98, 212, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        /* Financial Tables */
+        .financial-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .financial-table th,
+        .financial-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid rgba(39, 98, 212, 0.2);
+        }
+
+        .financial-table th {
+            background: rgba(39, 98, 212, 0.3);
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .financial-table tr:hover {
+            background: rgba(39, 98, 212, 0.1);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #2762d4, #4a90e2);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            width: 45%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            margin-left: auto;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 15px;
+            height: 15px;
+            background: #2762d4;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        .timeline-item:nth-child(odd)::before {
+            left: -45px;
+        }
+
+        .timeline-item:nth-child(even)::before {
+            right: -45px;
+        }
+
+        /* CTA Buttons */
+        .cta-section {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #2762d4, #4a90e2);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(39, 98, 212, 0.3);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid #2762d4;
+            color: #2762d4;
+        }
+
+        .cta-button.whatsapp {
+            background: linear-gradient(45deg, #25d366, #128c7e);
+        }
+
+        /* SDG Grid */
+        .sdg-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .sdg-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .sdg-item:hover {
+            background: rgba(39, 98, 212, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .nav { 
+                top: 80px;
+                left: 10px;
+                right: 10px;
+                transform: none;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 12px 15px;
+                max-width: none;
+                gap: 8px;
+            }
+            .nav-item {
+                font-size: 0.8rem;
+                padding: 8px 15px;
+                flex: 0 0 auto;
+            }
+            .language-toggle {
+                top: 20px;
+                right: 10px;
+                left: auto;
+            }
+            .hero {
+                padding-top: 180px;
+            }
+            .glass-card { 
+                padding: 25px; 
+                margin: 25px 10px; 
+            }
+            .timeline::before { left: 20px; }
+            .timeline-item { width: calc(100% - 60px); margin-left: 60px; }
+            .timeline-item::before { left: -35px; }
+            .timeline-item:nth-child(odd) { margin-left: 60px; }
+            .timeline-item:nth-child(odd)::before { left: -35px; }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hidden class for language switching */
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+        <button class="lang-btn" onclick="switchLanguage('ar')">العربية</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="#hero" class="nav-item" data-en="Home" data-ar="الرئيسية">Home</a>
+        <a href="#about" class="nav-item" data-en="About Hamad" data-ar="عن حمد">About Hamad</a>
+        <a href="#tarabot" class="nav-item" data-en="ترابط Platform" data-ar="منصة ترابط">ترابط Platform</a>
+        <a href="#partnership" class="nav-item" data-en="Partnership" data-ar="الشراكة">Partnership</a>
+        <a href="#business-plan" class="nav-item" data-en="Business Plan" data-ar="خطة العمل">Business Plan</a>
+        <a href="#financials" class="nav-item" data-en="Financials" data-ar="الماليات">Financials</a>
+        <a href="#roadmap" class="nav-item" data-en="Roadmap" data-ar="خارطة الطريق">Roadmap</a>
+        <a href="#oasis" class="nav-item" data-en="THEE OASIS" data-ar="واحة الابتكار">THEE OASIS</a>
+        <a href="#sdg" class="nav-item" data-en="UN SDGs" data-ar="أهداف التنمية">UN SDGs</a>
+        <a href="#contact" class="nav-item" data-en="Contact" data-ar="التواصل">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+
+            
+            <h1 data-en="ترابط Tarabot" data-ar="ترابط">ترابط Tarabot</h1>
+            <p class="subtitle" data-en="Your trusted hub to connect investors and startups to boost Kuwait's economy for a brighter future" data-ar="مركزك الموثوق لربط المستثمرين والشركات الناشئة لتعزيز اقتصاد الكويت من أجل مستقبل أكثر إشراقاً">Your trusted hub to connect investors and startups to boost Kuwait's economy for a brighter future</p>
+            
+            <div class="cta-section">
+                <a href="#partnership" class="cta-button" data-en="Strategic Partnership Proposal" data-ar="مقترح الشراكة الاستراتيجية">Strategic Partnership Proposal</a>
+                <a href="https://wa.me/96599999999" class="cta-button whatsapp" target="_blank" data-en="Contact via WhatsApp" data-ar="التواصل عبر واتساب">Contact via WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- About Hamad Section -->
+        <section id="about" class="glass-card fade-in">
+            <h2 data-en="About Hamad F. Alotaibi" data-ar="عن حمد فهد العتيبي">About Hamad F. Alotaibi</h2>
+            <div class="content-en">
+                <h3>Strategic Innovation Architect</h3>
+                <p><strong>Professional Background:</strong> A strategic innovation architect specializing in the integration of emotional intelligence, advanced technology, and cross-cultural business development. With proven expertise in AI collaboration methodologies, sustainable infrastructure design, and organizational transformation frameworks.</p>
+                
+                <p><strong>Unique Value Proposition:</strong> Combining deep emotional intelligence with technical sophistication and cultural sensitivity. In an era where organizations recognize that EQ matters more than IQ, I offer the rare combination of both, enhanced by practical experience in designing systems that serve multiple stakeholders simultaneously.</p>
+
+                <div class="grid-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h4>Emotional Intelligence</h4>
+                        <p>Advanced EQ methodologies, conflict resolution, and decision-making under pressure</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h4>AI Collaboration</h4>
+                        <p>Cognitive Intelligence Recognition methodology for optimizing human-AI partnerships</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏗️</div>
+                        <h4>Systems Architecture</h4>
+                        <p>Design of complex integrated systems addressing multiple objectives</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-ar hidden">
+                <h3>مهندس الابتكار الاستراتيجي</h3>
+                <p><strong>الخلفية المهنية:</strong> مهندس ابتكار استراتيجي متخصص في دمج الذكاء العاطفي والتكنولوجيا المتقدمة وتطوير الأعمال عبر الثقافات. مع خبرة مثبتة في منهجيات التعاون مع الذكاء الاصطناعي وتصميم البنية التحتية المستدامة وأطر التحول التنظيمي.</p>
+                
+                <p><strong>القيمة الفريدة:</strong> الجمع بين الذكاء العاطفي العميق والتطور التقني والحساسية الثقافية. في عصر تدرك فيه المنظمات أن الذكاء العاطفي أهم من الذكاء المعرفي، أقدم المزيج النادر من كليهما، معززاً بالخبرة العملية في تصميم الأنظمة التي تخدم أصحاب المصلحة المتعددين في آن واحد.</p>
+            </div>
+        </section>
+
+        <!-- Tarabot Platform Section -->
+        <section id="tarabot" class="glass-card fade-in">
+            <h2 data-en="ترابط Platform Overview" data-ar="نظرة عامة على منصة ترابط">ترابط Platform Overview</h2>
+            
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab-btn active" onclick="showTab('overview')" data-en="Overview" data-ar="نظرة عامة">Overview</button>
+                <button class="tab-btn" onclick="showTab('features')" data-en="Features" data-ar="المميزات">Features</button>
+                <button class="tab-btn" onclick="showTab('journey')" data-en="User Journey" data-ar="رحلة المستخدم">User Journey</button>
+                <button class="tab-btn" onclick="showTab('ecosystem')" data-en="Ecosystem" data-ar="النظام البيئي">Ecosystem</button>
+                <button class="tab-btn" onclick="showTab('vision')" data-ar="الرؤية" data-en="Vision">Vision</button>
+            </div>
+
+            <!-- Overview Tab -->
+            <div id="overview" class="tab-content active">
+                <div class="content-en">
+                    <h3>Kuwait's First Comprehensive Innovation Ecosystem</h3>
+                    <p>ترابط (Tarabot) is a pioneering national project aimed at establishing the first integrated innovation ecosystem in Kuwait. It operates as a highly reliable digital platform that connects talented Kuwaiti creators and entrepreneurs with strategic capital and commercial opportunities.</p>
+                    
+                    <div class="grid-2">
+                        <div class="feature-card">
+                            <div class="feature-icon">🛡️</div>
+                            <h4>Trust Engine</h4>
+                            <p>Mandatory identity verification through the national "Hawiyti" system, creating authenticated personal profiles that showcase user skills and achievements in a tamper-proof manner.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🤖</div>
+                            <h4>AI Super Agent</h4>
+                            <p>Personal assistant powered by artificial intelligence to multiply user productivity, helping them with everything from business plan preparation to marketing content creation.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🏪</div>
+                            <h4>Innovation Marketplace</h4>
+                            <p>Economic engine that allows creators to offer services, sell digital products, and launch crowdfunding campaigns, while investors receive a consistent flow of verified investment opportunities.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🏛️</div>
+                            <h4>GovTech Engine</h4>
+                            <p>Integrated unit to facilitate company establishment procedures and issue commercial licenses electronically, transforming ideas into operating legal entities.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-ar hidden">
+                    <h3>أول نظام بيئي شامل للابتكار في الكويت</h3>
+                    <p>ترابط هو مشروع وطني رائد يهدف إلى تأسيس أول منظومة ابتكار متكاملة في الكويت. يعمل كمنصة رقمية عالية الموثوقية تربط المواهب والمبدعين ورواد الأعمال الكويتيين بالمال الاستراتيجي والفرص التجارية.</p>
+                    
+                    <div class="grid-2">
+                        <div class="feature-card">
+                            <div class="feature-icon">🛡️</div>
+                            <h4>محرك الثقة</h4>
+                            <p>التحقق الإلزامي من هوية المستخدمين عبر نظام "هويتي" الوطني، وإنشاء ملف شخصي موثق يعرض مهارات وإنجازات المستخدم بشكل لا يمكن العبث به.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🤖</div>
+                            <h4>الوكيل الذكي الفائق</h4>
+                            <p>مساعد شخصي يعمل بالذكاء الاصطناعي لمضاعفة إنتاجية المستخدمين، مساعدتهم في كل شيء من إعداد خطط العمل إلى إنشاء المحتوى التسويقي.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🏪</div>
+                            <h4>سوق الابتكار</h4>
+                            <p>محرك اقتصادي يتيح للمبدعين عرض خدماتهم، بيع منتجاتهم الرقمية، وإطلاق حملات تمويل جماعي، بينما يحصل المستثمرون على تدفق متسق من الفرص الاستثمارية الموثقة.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🏛️</div>
+                            <h4>محرك التكنولوجيا الحكومية</h4>
+                            <p>وحدة متكاملة لتسهيل إجراءات تأسيس الشركات وإصدار التراخيص التجارية إلكترونياً، مما يحول الأفكار إلى كيانات قانونية عاملة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Tab -->
+            <div id="features" class="tab-content">
+                <div class="content-en">
+                    <h3>Core Platform Features</h3>
+                    <div class="grid-3">
+                        <div class="feature-card">
+                            <div class="feature-icon">🔐</div>
+                            <h4>Hawiyti Integration</h4>
+                            <p>Secure government ID verification ensuring authentic user profiles and building trust in the ecosystem.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🌐</div>
+                            <h4>Bilingual Platform</h4>
+                            <p>Full Arabic and English support with cultural adaptation for the GCC market.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">💰</div>
+                            <h4>Investment Matching</h4>
+                            <p>AI-powered algorithm connecting entrepreneurs with suitable investors based on compatibility metrics.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📊</div>
+                            <h4>Analytics Dashboard</h4>
+                            <p>Comprehensive analytics for both entrepreneurs and investors to track performance and opportunities.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🤝</div>
+                            <h4>Mentorship Network</h4>
+                            <p>Connect with experienced mentors and industry experts for guidance and support.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📱</div>
+                            <h4>Mobile-First Design</h4>
+                            <p>Optimized for mobile devices with responsive design for seamless user experience.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-ar hidden">
+                    <h3>المميزات الأساسية للمنصة</h3>
+                    <div class="grid-3">
+                        <div class="feature-card">
+                            <div class="feature-icon">🔐</div>
+                            <h4>تكامل هويتي</h4>
+                            <p>التحقق الآمن من الهوية الحكومية لضمان ملفات المستخدمين الأصيلة وبناء الثقة في النظام البيئي.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🌐</div>
+                            <h4>منصة ثنائية اللغة</h4>
+                            <p>دعم كامل للعربية والإنجليزية مع التكيف الثقافي لسوق دول مجلس التعاون الخليجي.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">💰</div>
+                            <h4>مطابقة الاستثمار</h4>
+                            <p>خوارزمية مدعومة بالذكاء الاصطناعي تربط رواد الأعمال بالمستثمرين المناسبين بناءً على مقاييس التوافق.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📊</div>
+                            <h4>لوحة التحليلات</h4>
+                            <p>تحليلات شاملة لكل من رواد الأعمال والمستثمرين لتتبع الأداء والفرص.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🤝</div>
+                            <h4>شبكة الإرشاد</h4>
+                            <p>التواصل مع الموجهين ذوي الخبرة وخبراء الصناعة للحصول على التوجيه والدعم.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📱</div>
+                            <h4>تصميم يركز على الهاتف المحمول</h4>
+                            <p>محسن للأجهزة المحمولة مع تصميم متجاوب لتجربة مستخدم سلسة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Journey Tab -->
+            <div id="journey" class="tab-content">
+                <div class="content-en">
+                    <h3>User Journey: From Idea to Success</h3>
+                    
+                    <h4>Creator Journey (7 Steps)</h4>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h5>1. Hawiyti Verification</h5>
+                            <p>Secure identity verification through Kuwait's national digital identity system, establishing trust and authenticity.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>2. Digital Palm Profile</h5>
+                            <p>Create comprehensive verified profile showcasing skills, experience, and achievements with tamper-proof digital credentials.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>3. AI-Assisted Development</h5>
+                            <p>Leverage the AI Super Agent to refine business ideas, create business plans, and develop marketing strategies.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>4. Innovation Marketplace</h5>
+                            <p>Launch projects, offer services, and connect with potential investors through the integrated marketplace platform.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>5. Investor Matching</h5>
+                            <p>AI-powered matching system connects creators with compatible investors based on industry, stage, and investment criteria.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>6. Legal Formation</h5>
+                            <p>Utilize GovTech integration for seamless business registration and legal entity formation through government partnerships.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>7. Launch & Scale</h5>
+                            <p>Access ongoing support, mentorship, and additional funding rounds as the business grows and scales.</p>
+                        </div>
+                    </div>
+                    
+                    <h4>Investor Journey (7 Steps)</h4>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h5>1. Verified Registration</h5>
+                            <p>Complete Hawiyti verification and investor accreditation process to access premium investment opportunities.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>2. Investment Profile</h5>
+                            <p>Set investment preferences, risk tolerance, and sector interests for personalized opportunity matching.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>3. Deal Flow Access</h5>
+                            <p>Receive curated investment opportunities from verified entrepreneurs with comprehensive due diligence materials.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>4. AI-Powered Analytics</h5>
+                            <p>Access advanced analytics, market insights, and risk assessments powered by artificial intelligence.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>5. Direct Engagement</h5>
+                            <p>Connect directly with entrepreneurs through secure messaging and video conferencing within the platform.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>6. Investment Execution</h5>
+                            <p>Complete investments through integrated legal and financial infrastructure with full compliance support.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>7. Portfolio Management</h5>
+                            <p>Monitor portfolio performance, receive regular updates, and access exit opportunities through the platform.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-ar hidden">
+                    <h3>رحلة المستخدم: من الفكرة إلى النجاح</h3>
+                    
+                    <h4>رحلة المبدع (7 خطوات)</h4>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h5>1. التحقق من هويتي</h5>
+                            <p>التحقق الآمن من الهوية من خلال نظام الهوية الرقمية الوطني في الكويت، مما يؤسس الثقة والأصالة.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>2. ملف النخلة الرقمية</h5>
+                            <p>إنشاء ملف شخصي شامل وموثق يعرض المهارات والخبرة والإنجازات مع أوراق اعتماد رقمية مقاومة للتلاعب.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>3. التطوير بمساعدة الذكاء الاصطناعي</h5>
+                            <p>الاستفادة من الوكيل الذكي الفائق لتحسين أفكار الأعمال وإنشاء خطط العمل وتطوير استراتيجيات التسويق.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>4. سوق الابتكار</h5>
+                            <p>إطلاق المشاريع وتقديم الخدمات والتواصل مع المستثمرين المحتملين من خلال منصة السوق المتكاملة.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>5. مطابقة المستثمرين</h5>
+                            <p>نظام مطابقة مدعوم بالذكاء الاصطناعي يربط المبدعين بالمستثمرين المتوافقين بناءً على الصناعة والمرحلة ومعايير الاستثمار.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>6. التكوين القانوني</h5>
+                            <p>استخدام تكامل التكنولوجيا الحكومية لتسجيل الأعمال السلس وتكوين الكيان القانوني من خلال الشراكات الحكومية.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>7. الإطلاق والتوسع</h5>
+                            <p>الوصول إلى الدعم المستمر والإرشاد وجولات التمويل الإضافية مع نمو وتوسع الأعمال.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ecosystem Tab -->
+            <div id="ecosystem" class="tab-content">
+                <div class="content-en">
+                    <h3>Complete Innovation Ecosystem</h3>
+                    <p>ترابط creates a comprehensive ecosystem that serves all stakeholders in the innovation journey:</p>
+                    
+                    <div class="grid-2">
+                        <div class="feature-card">
+                            <div class="feature-icon">👥</div>
+                            <h4>For Entrepreneurs</h4>
+                            <ul style="text-align: left; margin-top: 15px;">
+                                <li>Verified profile creation with Digital Palm system</li>
+                                <li>AI-powered business development tools</li>
+                                <li>Direct access to investor network</li>
+                                <li>Legal and regulatory support</li>
+                                <li>Mentorship and guidance programs</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">💼</div>
+                            <h4>For Investors</h4>
+                            <ul style="text-align: left; margin-top: 15px;">
+                                <li>Curated deal flow from verified entrepreneurs</li>
+                                <li>Advanced analytics and due diligence tools</li>
+                                <li>Portfolio management dashboard</li>
+                                <li>Risk assessment and market insights</li>
+                                <li>Direct communication with founders</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🏛️</div>
+                            <h4>For Government</h4>
+                            <ul style="text-align: left; margin-top: 15px;">
+                                <li>Economic diversification support</li>
+                                <li>Youth empowerment initiatives</li>
+                                <li>Digital transformation acceleration</li>
+                                <li>Innovation ecosystem development</li>
+                                <li>Vision 2035 alignment</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🌍</div>
+                            <h4>For Society</h4>
+                            <ul style="text-align: left; margin-top: 15px;">
+                                <li>Job creation and economic growth</li>
+                                <li>Innovation culture development</li>
+                                <li>Gender equality in entrepreneurship</li>
+                                <li>Knowledge economy advancement</li>
+                                <li>Sustainable development goals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-ar hidden">
+                    <h3>نظام بيئي شامل للابتكار</h3>
+                    <p>ترابط ينشئ نظاماً بيئياً شاملاً يخدم جميع أصحاب المصلحة في رحلة الابتكار:</p>
+                    
+                    <div class="grid-2">
+                        <div class="feature-card">
+                            <div class="feature-icon">👥</div>
+                            <h4>لرواد الأعمال</h4>
+                            <ul style="text-align: right; margin-top: 15px;">
+                                <li>إنشاء ملف شخصي موثق بنظام النخلة الرقمية</li>
+                                <li>أدوات تطوير الأعمال المدعومة بالذكاء الاصطناعي</li>
+                                <li>وصول مباشر إلى شبكة المستثمرين</li>
+                                <li>الدعم القانوني والتنظيمي</li>
+                                <li>برامج الإرشاد والتوجيه</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">💼</div>
+                            <h4>للمستثمرين</h4>
+                            <ul style="text-align: right; margin-top: 15px;">
+                                <li>تدفق صفقات منسق من رواد أعمال موثقين</li>
+                                <li>أدوات تحليلات متقدمة وعناية واجبة</li>
+                                <li>لوحة إدارة المحفظة الاستثمارية</li>
+                                <li>تقييم المخاطر ورؤى السوق</li>
+                                <li>تواصل مباشر مع المؤسسين</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🏛️</div>
+                            <h4>للحكومة</h4>
+                            <ul style="text-align: right; margin-top: 15px;">
+                                <li>دعم التنويع الاقتصادي</li>
+                                <li>مبادرات تمكين الشباب</li>
+                                <li>تسريع التحول الرقمي</li>
+                                <li>تطوير النظام البيئي للابتكار</li>
+                                <li>التوافق مع رؤية 2035</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🌍</div>
+                            <h4>للمجتمع</h4>
+                            <ul style="text-align: right; margin-top: 15px;">
+                                <li>خلق فرص العمل والنمو الاقتصادي</li>
+                                <li>تطوير ثقافة الابتكار</li>
+                                <li>المساواة بين الجنسين في ريادة الأعمال</li>
+                                <li>تقدم اقتصاد المعرفة</li>
+                                <li>أهداف التنمية المستدامة</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vision Tab -->
+            <div id="vision" class="tab-content">
+                <div class="content-en">
+                    <h3>Vision & Mission</h3>
+                    <div class="grid-2">
+                        <div class="feature-card">
+                            <div class="feature-icon">🎯</div>
+                            <h4>Our Vision</h4>
+                            <p>To become the first digital hub for innovation in Kuwait, and the fundamental engine that connects the brightest minds with smart capital to achieve qualitative leaps in the business environment.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🚀</div>
+                            <h4>Our Mission</h4>
+                            <p>Empowering Kuwaiti creators and entrepreneurs by providing the tools, trust, and opportunities they need to transform their ideas into successful and sustainable projects that serve national development goals.</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Strategic Goals</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h5>Short Term (Year 1)</h5>
+                            <p>Launch MVP, acquire first 5,000 verified users, establish legal entity and secure initial funding.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Medium Term (Years 2-3)</h5>
+                            <p>Achieve financial break-even, activate all revenue streams, establish strategic partnerships with major organizations.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>Long Term (Years 4-5)</h5>
+                            <p>Become Kuwait's most trusted professional platform, expand regionally, launch THEE OASIS ecosystem phase.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-ar hidden">
+                    <h3>الرؤية والرسالة</h3>
+                    <div class="grid-2">
+                        <div class="feature-card">
+                            <div class="feature-icon">🎯</div>
+                            <h4>رؤيتنا</h4>
+                            <p>أن نكون أول محور رقمي للابتكار في الكويت، والمحرك الأساسي الذي يربط بين ألمع العقول ورأس المال الذكي لتحقيق نقلات نوعية في بيئة الأعمال.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🚀</div>
+                            <h4>رسالتنا</h4>
+                            <p>تمكين المبدعين ورواد الأعمال الكويتيين من خلال توفير الأدوات والثقة والفرص التي يحتاجونها لتحويل أفكارهم إلى مشاريع ناجحة ومستدامة تخدم أهداف التنمية الوطنية.</p>
+                        </div>
+                    </div>
+                    
+                    <h3>الأهداف الاستراتيجية</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h5>المدى القصير (السنة الأولى)</h5>
+                            <p>إطلاق النسخة الأولية، اكتساب أول 5000 مستخدم موثق، تأسيس الكيان القانوني وتأمين التمويل الأولي.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>المدى المتوسط (السنوات 2-3)</h5>
+                            <p>تحقيق التوازن المالي، تفعيل جميع مصادر الإيرادات، تأسيس شراكات استراتيجية مع منظمات كبرى.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h5>المدى الطويل (السنوات 4-5)</h5>
+                            <p>أن نصبح المنصة المهنية الأكثر موثوقية في الكويت، التوسع إقليمياً، إطلاق مرحلة نظام واحة الابتكار.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partnership Section -->
+        <section id="partnership" class="glass-card fade-in">
+            <h2 data-en="Strategic Partnership Proposal for Motawer" data-ar="مقترح الشراكة الاستراتيجية مع مطور">Strategic Partnership Proposal for Motawer</h2>
+            
+            <div class="content-en">
+                <h3>Executive Summary</h3>
+                <p>We propose a transformative strategic partnership between ترابط (Tarabot) and the Motawer program that goes beyond traditional accelerator relationships. This partnership positions both organizations as co-architects of Kuwait's innovation ecosystem, directly supporting Vision 2035 objectives while creating a replicable model for regional expansion.</p>
+                
+                <h3>Partnership Framework</h3>
+                <div class="grid-2">
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h4>What ترابط Brings</h4>
+                        <ul style="text-align: left; margin-top: 15px;">
+                            <li>Complete technology platform with AI capabilities</li>
+                            <li>Hawiyti integration for verified user ecosystem</li>
+                            <li>Proven business model and implementation roadmap</li>
+                            <li>Regional expansion strategy (THEE OASIS)</li>
+                            <li>Gender-inclusive approach supporting both male and female entrepreneurs</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏛️</div>
+                        <h4>What Motawer Provides</h4>
+                        <ul style="text-align: left; margin-top: 15px;">
+                            <li>Institutional backing from CBK and banking sector</li>
+                            <li>Mentorship network and industry expertise</li>
+                            <li>Regulatory support and government connections</li>
+                            <li>Market validation and credibility</li>
+                            <li>Access to established entrepreneur pipeline</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Mutual Value Creation</h3>
+                <p><strong>For Motawer:</strong> ترابط becomes the digital infrastructure powering your program, providing verified entrepreneur profiles, AI-enhanced due diligence, and automated progress tracking. Your alumni gain permanent verified credentials on the platform, creating lasting value beyond the program duration.</p>
+                
+                <p><strong>For ترابط:</strong> Motawer provides the institutional credibility, regulatory support, and initial user base needed for rapid market penetration. The partnership validates our approach and creates a sustainable pipeline of verified entrepreneurs.</p>
+                
+                <h3>Implementation Approach</h3>
+                <p>Rather than participating in the traditional 5-month program cycle, we propose immediate strategic partnership implementation:</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h5>Phase 1: Partnership Agreement (Month 1)</h5>
+                        <p>Formalize strategic partnership, define roles and responsibilities, establish governance structure.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>Phase 2: Platform Integration (Months 2-3)</h5>
+                        <p>Integrate Motawer branding and processes into ترابط platform, onboard existing alumni network.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>Phase 3: Joint Launch (Month 4)</h5>
+                        <p>Public launch of enhanced platform with Motawer endorsement, begin processing new applications.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>Phase 4: Scale & Expand (Months 5-12)</h5>
+                        <p>Scale operations, measure impact, prepare for regional expansion phase.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-ar hidden">
+                <h3>الملخص التنفيذي</h3>
+                <p>نقترح شراكة استراتيجية تحويلية بين ترابط وبرنامج مطور تتجاوز علاقات المسرعات التقليدية. هذه الشراكة تضع كلا المنظمتين كمهندسين مشاركين لنظام الابتكار في الكويت، مما يدعم أهداف رؤية 2035 مباشرة مع إنشاء نموذج قابل للتكرار للتوسع الإقليمي.</p>
+                
+                <h3>إطار الشراكة</h3>
+                <div class="grid-2">
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h4>ما يقدمه ترابط</h4>
+                        <ul style="text-align: right; margin-top: 15px;">
+                            <li>منصة تكنولوجية كاملة مع قدرات الذكاء الاصطناعي</li>
+                            <li>تكامل هويتي لنظام المستخدمين الموثق</li>
+                            <li>نموذج أعمال مثبت وخارطة طريق للتنفيذ</li>
+                            <li>استراتيجية التوسع الإقليمي (واحة الابتكار)</li>
+                            <li>نهج شامل للجنسين يدعم رواد الأعمال من الذكور والإناث</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏛️</div>
+                        <h4>ما يوفره مطور</h4>
+                        <ul style="text-align: right; margin-top: 15px;">
+                            <li>الدعم المؤسسي من بنك الكويت المركزي والقطاع المصرفي</li>
+                            <li>شبكة الإرشاد والخبرة الصناعية</li>
+                            <li>الدعم التنظيمي والاتصالات الحكومية</li>
+                            <li>التحقق من السوق والمصداقية</li>
+                            <li>الوصول إلى خط أنابيب رواد الأعمال المؤسس</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Plan Section -->
+        <section id="business-plan" class="glass-card fade-in">
+            <h2 data-en="Comprehensive Business Plan" data-ar="خطة العمل الشاملة">Comprehensive Business Plan</h2>
+            
+            <div class="content-en">
+                <h3>Market Analysis</h3>
+                <p><strong>Market Size:</strong> Kuwait's ICT spending is expected to exceed $39.83 billion in the next five years. The FinTech sector is poised for growth, reaching $15 billion by 2025. The creator economy is growing at a compound annual rate of 18.8% regionally.</p>
+                
+                <p><strong>Market Gap:</strong> Despite the existence of global platforms, they lack the local focus and high reliability provided by ترابط through Hawiyti verification and deep understanding of Kuwaiti market needs.</p>
+                
+                <h3>Revenue Model</h3>
+                <div class="grid-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">💳</div>
+                        <h4>Subscription Tiers</h4>
+                        <p>Freemium model with premium features for creators and investors, ranging from KD 10-50 monthly.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h4>Transaction Fees</h4>
+                        <p>2-5% commission on successful investments and marketplace transactions.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏢</div>
+                        <h4>Enterprise Services</h4>
+                        <p>Custom solutions for corporations and government entities, KD 1,000-10,000 annually.</p>
+                    </div>
+                </div>
+                
+                <h3>Competitive Advantage</h3>
+                <ul style="margin: 20px 0;">
+                    <li><strong>Hyper-Localization:</strong> Mandatory integration with national Hawiyti system provides unmatched trust advantage</li>
+                    <li><strong>Integrated Ecosystem:</strong> Complete journey from idea to funding to legal formation</li>
+                    <li><strong>AI-Powered Enhancement:</strong> Super Agent is a productivity partner, not just a chatbot</li>
+                    <li><strong>Investment in People Model:</strong> Subscription care feature creates new channel for smart investment</li>
+                </ul>
+                
+                <h3>Target Market Segments</h3>
+                <div class="grid-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">👨‍💼</div>
+                        <h4>Entrepreneurs</h4>
+                        <p>Young Kuwaiti creators and business founders seeking funding and mentorship opportunities.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💼</div>
+                        <h4>Investors</h4>
+                        <p>Individual investors, companies, and institutions looking for innovative solutions and talent.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏛️</div>
+                        <h4>Government</h4>
+                        <p>Government entities supporting economic diversification and innovation initiatives.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-ar hidden">
+                <h3>تحليل السوق</h3>
+                <p><strong>حجم السوق:</strong> من المتوقع أن يتجاوز الإنفاق على تكنولوجيا المعلومات والاتصالات في الكويت 39.83 مليار دولار في السنوات الخمس القادمة. قطاع التكنولوجيا المالية مرشح للنمو ليصل إلى 15 مليار دولار بحلول عام 2025. اقتصاد المبدعين ينمو بمعدل سنوي مركب 18.8% إقليمياً.</p>
+                
+                <p><strong>فجوة السوق:</strong> على الرغم من وجود منصات عالمية، إلا أنها تفتقر إلى التركيز المحلي والموثوقية العالية التي يوفرها ترابط من خلال التحقق عبر هويتي والفهم العميق لاحتياجات السوق الكويتي.</p>
+            </div>
+        </section>
+
+        <!-- Financial Projections Section -->
+        <section id="financials" class="glass-card fade-in">
+            <h2 data-en="Financial Projections & ROI" data-ar="التوقعات المالية والعائد على الاستثمار">Financial Projections & ROI</h2>
+            
+            <div class="content-en">
+                <h3>5-Year Financial Forecast</h3>
+                <table class="financial-table">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Users</th>
+                            <th>Revenue (KD)</th>
+                            <th>Expenses (KD)</th>
+                            <th>Net Profit (KD)</th>
+                            <th>Cumulative ROI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Year 1</td>
+                            <td>5,000</td>
+                            <td>125,000</td>
+                            <td>200,000</td>
+                            <td>-75,000</td>
+                            <td>-37.5%</td>
+                        </tr>
+                        <tr>
+                            <td>Year 2</td>
+                            <td>15,000</td>
+                            <td>450,000</td>
+                            <td>350,000</td>
+                            <td>100,000</td>
+                            <td>12.5%</td>
+                        </tr>
+                        <tr>
+                            <td>Year 3</td>
+                            <td>35,000</td>
+                            <td>875,000</td>
+                            <td>600,000</td>
+                            <td>275,000</td>
+                            <td>50%</td>
+                        </tr>
+                        <tr>
+                            <td>Year 4</td>
+                            <td>65,000</td>
+                            <td>1,300,000</td>
+                            <td>850,000</td>
+                            <td>450,000</td>
+                            <td>112.5%</td>
+                        </tr>
+                        <tr>
+                            <td>Year 5</td>
+                            <td>100,000</td>
+                            <td>1,750,000</td>
+                            <td>1,100,000</td>
+                            <td>650,000</td>
+                            <td>225%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Funding Requirements</h3>
+                <div class="grid-2">
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h4>Initial Investment</h4>
+                        <p><strong>KD 200,000</strong> for platform development, team building, and market launch</p>
+                        <ul style="text-align: left; margin-top: 10px;">
+                            <li>Technology Development: KD 80,000</li>
+                            <li>Team & Operations: KD 70,000</li>
+                            <li>Marketing & Launch: KD 30,000</li>
+                            <li>Legal & Compliance: KD 20,000</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📈</div>
+                        <h4>Growth Investment</h4>
+                        <p><strong>KD 300,000</strong> in Year 2 for scaling and regional expansion</p>
+                        <ul style="text-align: left; margin-top: 10px;">
+                            <li>Platform Scaling: KD 120,000</li>
+                            <li>Team Expansion: KD 100,000</li>
+                            <li>Market Expansion: KD 50,000</li>
+                            <li>Strategic Partnerships: KD 30,000</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Revenue Breakdown by Source</h3>
+                <div class="grid-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">💳</div>
+                        <h4>Subscriptions (60%)</h4>
+                        <p>Monthly recurring revenue from premium features and services</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💼</div>
+                        <h4>Transaction Fees (25%)</h4>
+                        <p>Commission from successful investments and marketplace transactions</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏢</div>
+                        <h4>Enterprise Services (15%)</h4>
+                        <p>Custom solutions for corporations and government partnerships</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-ar hidden">
+                <h3>التوقعات المالية لخمس سنوات</h3>
+                <p>نتوقع الوصول إلى نقطة التوازن المالي بين السنة الثالثة والرابعة، مع تحقيق إيرادات سنوية تتجاوز 1.5 مليون دينار كويتي بحلول السنة الخامسة، وذلك عبر نموذج اشتراكات متدرج ورسوم معاملات تنافسية.</p>
+            </div>
+        </section>
+
+        <!-- Roadmap Section -->
+        <section id="roadmap" class="glass-card fade-in">
+            <h2 data-en="Implementation Roadmap & Milestones" data-ar="خارطة الطريق والمعالم">Implementation Roadmap & Milestones</h2>
+            
+            <div class="content-en">
+                <h3>Detailed Implementation Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h5>Q1 2025: Foundation Phase</h5>
+                        <ul>
+                            <li>Secure strategic partnership with Motawer</li>
+                            <li>Complete legal entity formation</li>
+                            <li>Finalize Hawiyti integration agreements</li>
+                            <li>Assemble core development team</li>
+                            <li>Begin MVP development</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>Q2 2025: Development Phase</h5>
+                        <ul>
+                            <li>Complete platform MVP development</li>
+                            <li>Implement AI Super Agent features</li>
+                            <li>Integrate Digital Palm verification system</li>
+                            <li>Conduct security and compliance testing</li>
+                            <li>Onboard first 100 beta users</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>Q3 2025: Launch Phase</h5>
+                        <ul>
+                            <li>Public platform launch in Kuwait</li>
+                            <li>Marketing campaign and user acquisition</li>
+                            <li>Onboard first 1,000 verified users</li>
+                            <li>Launch Innovation Marketplace</li>
+                            <li>Establish first investor partnerships</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>Q4 2025: Growth Phase</h5>
+                        <ul>
+                            <li>Scale to 5,000 active users</li>
+                            <li>Launch premium subscription tiers</li>
+                            <li>Implement GovTech integration</li>
+                            <li>First successful funding matches</li>
+                            <li>Prepare Series A funding round</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>2026: Expansion Phase</h5>
+                        <ul>
+                            <li>Regional expansion to GCC markets</li>
+                            <li>Advanced AI features rollout</li>
+                            <li>Corporate partnerships program</li>
+                            <li>Scale to 25,000+ users</li>
+                            <li>Achieve operational profitability</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>2027-2029: Scale Phase</h5>
+                        <ul>
+                            <li>Launch THEE OASIS ecosystem</li>
+                            <li>International market entry</li>
+                            <li>Advanced analytics and insights</li>
+                            <li>Scale to 100,000+ users</li>
+                            <li>Prepare for potential exit opportunities</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Key Performance Indicators (KPIs)</h3>
+                <div class="grid-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h4>User Metrics</h4>
+                        <ul style="text-align: left;">
+                            <li>Monthly Active Users (MAU)</li>
+                            <li>User Retention Rate</li>
+                            <li>Profile Completion Rate</li>
+                            <li>Verification Success Rate</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h4>Financial Metrics</h4>
+                        <ul style="text-align: left;">
+                            <li>Monthly Recurring Revenue (MRR)</li>
+                            <li>Customer Acquisition Cost (CAC)</li>
+                            <li>Lifetime Value (LTV)</li>
+                            <li>Transaction Volume</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h4>Success Metrics</h4>
+                        <ul style="text-align: left;">
+                            <li>Successful Funding Matches</li>
+                            <li>Companies Registered</li>
+                            <li>Jobs Created</li>
+                            <li>Investment Volume Facilitated</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-ar hidden">
+                <h3>خارطة الطريق التفصيلية للتنفيذ</h3>
+                <p>خطة تنفيذ مرحلية على مدى 5 سنوات تبدأ بالتأسيس والتطوير في 2025 وتصل إلى التوسع الإقليمي والنمو المستدام بحلول 2029.</p>
+            </div>
+        </section>
+
+        <!-- THEE OASIS Section -->
+        <section id="oasis" class="glass-card fade-in">
+            <h2 data-en="THEE OASIS: The Bigger Vision" data-ar="واحة الابتكار: الرؤية الأكبر">THEE OASIS: The Bigger Vision</h2>
+            
+            <div class="content-en">
+                <h3>Regional Digital Ecosystem</h3>
+                <p>THEE OASIS represents the second phase of our vision - a synergistic digital ecosystem designed to accelerate Vision 2030 goals across the GCC region. This comprehensive platform integrates gaming, education, creator economy, and innovation infrastructure.</p>
+                
+                <div class="grid-2">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h4>Content & Gaming Hub</h4>
+                        <p>Culturally-authentic IP development including "Princess Aliyah and the Cutting Edge of Glory" - a new genre of interactive entertainment designed to inspire unity and shared purpose.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎓</div>
+                        <h4>Educational Platform</h4>
+                        <p>AI-driven personalized learning paths with immersive experiences, gamified life skills development, and emotional intelligence training.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💼</div>
+                        <h4>Creator Economy</h4>
+                        <p>Comprehensive ecosystem for digital asset creation, virtual marketplace, direct manufacturing pipeline, and investment simulation sandbox.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h4>Social Collaboration</h4>
+                        <p>Built around collaboration, teams, and shared projects, fostering soft skills essential for the future workforce.</p>
+                    </div>
+                </div>
+                
+                <h3>Strategic Partnerships</h3>
+                <div class="grid-3">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h4>Savvy Games Group</h4>
+                        <p>Content foundry providing culturally-authentic IP and development engine for global gaming ecosystem.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏗️</div>
+                        <h4>NEOM Media Hub</h4>
+                        <p>AAA game studios within NEOM ecosystem, creating first "Made in NEOM" global blockbusters.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h4>TONOMUS</h4>
+                        <p>Physical-digital bridge and flagship cognitive application for advanced manufacturing and technology.</p>
+                    </div>
+                </div>
+                
+                <h3>Implementation Timeline</h3>
+                <p>THEE OASIS development begins in Year 4-5 of ترابط operations, leveraging the established user base, technology infrastructure, and regional partnerships to create a comprehensive digital nation platform.</p>
+            </div>
+            
+            <div class="content-ar hidden">
+                <h3>النظام البيئي الرقمي الإقليمي</h3>
+                <p>واحة الابتكار تمثل المرحلة الثانية من رؤيتنا - نظام بيئي رقمي تآزري مصمم لتسريع أهداف رؤية 2030 عبر منطقة دول مجلس التعاون الخليجي. هذه المنصة الشاملة تدمج الألعاب والتعليم واقتصاد المبدعين وبنية الابتكار التحتية.</p>
+            </div>
+        </section>
+
+        <!-- UN SDGs Section -->
+        <section id="sdg" class="glass-card fade-in">
+            <h2 data-en="UN Sustainable Development Goals Alignment" data-ar="التوافق مع أهداف التنمية المستدامة للأمم المتحدة">UN Sustainable Development Goals Alignment</h2>
+            
+            <div class="content-en">
+                <h3>Perfect Alignment with Global Standards</h3>
+                <p>ترابط is strategically designed to contribute to multiple UN Sustainable Development Goals, demonstrating our commitment to creating positive global impact while building a successful business.</p>
+                
+                <div class="sdg-grid">
+                    <div class="sdg-item">
+                        <div class="feature-icon">💼</div>
+                        <h4>SDG 8: Decent Work</h4>
+                        <p>Creating quality jobs and entrepreneurship opportunities for Kuwaiti youth</p>
+                    </div>
+                    <div class="sdg-item">
+                        <div class="feature-icon">🎓</div>
+                        <h4>SDG 4: Quality Education</h4>
+                        <p>AI-powered learning and skill development through our platform</p>
+                    </div>
+                    <div class="sdg-item">
+                        <div class="feature-icon">⚖️</div>
+                        <h4>SDG 5: Gender Equality</h4>
+                        <p>Supporting both male and female entrepreneurs with equal opportunities</p>
+                    </div>
+                    <div class="sdg-item">
+                        <div class="feature-icon">🏗️</div>
+                        <h4>SDG 9: Innovation</h4>
+                        <p>Building digital infrastructure and fostering innovation ecosystem</p>
+                    </div>
+                    <div class="sdg-item">
+                        <div class="feature-icon">🤝</div>
+                        <h4>SDG 17: Partnerships</h4>
+                        <p>Strategic collaborations like our Motawer partnership</p>
+                    </div>
+                    <div class="sdg-item">
+                        <div class="feature-icon">💰</div>
+                        <h4>SDG 1: No Poverty</h4>
+                        <p>Economic empowerment through entrepreneurship and job creation</p>
+                    </div>
+                    <div class="sdg-item">
+                        <div class="feature-icon">🌍</div>
+                        <h4>SDG 10: Reduced Inequalities</h4>
+                        <p>Inclusive platform accessible to all backgrounds and demographics</p>
+                    </div>
+                    <div class="sdg-item">
+                        <div class="feature-icon">🏙️</div>
+                        <h4>SDG 11: Sustainable Cities</h4>
+                        <p>Contributing to Kuwait's transformation into a smart, sustainable city</p>
+                    </div>
+                </div>
+                
+                <h3>Gender Equality Focus</h3>
+                <div class="grid-2">
+                    <div class="feature-card">
+                        <div class="feature-icon">👨‍💼</div>
+                        <h4>Male Entrepreneurs</h4>
+                        <p>Comprehensive support system for male entrepreneurs with dedicated resources, mentorship programs, and investment matching services.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👩‍💼</div>
+                        <h4>Female Entrepreneurs</h4>
+                        <p>Special initiatives supporting female entrepreneurship, addressing unique challenges, and creating equal opportunities in the innovation ecosystem.</p>
+                    </div>
+                </div>
+                
+                <h3>Impact Measurement</h3>
+                <p>We commit to regular reporting on our SDG contributions, including:</p>
+                <ul style="margin: 20px 0;">
+                    <li>Number of jobs created through platform</li>
+                    <li>Gender distribution of entrepreneurs and investors</li>
+                    <li>Economic impact of funded projects</li>
+                    <li>Skills development and education metrics</li>
+                    <li>Innovation ecosystem growth indicators</li>
+                </ul>
+            </div>
+            
+            <div class="content-ar hidden">
+                <h3>التوافق المثالي مع المعايير العالمية</h3>
+                <p>ترابط مصمم استراتيجياً للمساهمة في أهداف التنمية المستدامة المتعددة للأمم المتحدة، مما يدل على التزامنا بخلق تأثير عالمي إيجابي مع بناء أعمال ناجحة.</p>
+                
+                <h3>التركيز على المساواة بين الجنسين</h3>
+                <p>منصة ترابط توفر فرصاً متساوية لكل من رواد الأعمال الذكور والإناث، مما يساهم في تحقيق هدف المساواة بين الجنسين ويخلق نظاماً بيئياً شاملاً للابتكار.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="glass-card fade-in">
+            <h2 data-en="Contact & Next Steps" data-ar="التواصل والخطوات التالية">Contact & Next Steps</h2>
+            
+            <div class="content-en">
+                <div class="grid-2">
+                    <div class="feature-card">
+                        <div class="feature-icon">📧</div>
+                        <h4>Hamad F. Alotaibi</h4>
+                        <p><strong>Founder & Strategic Innovation Architect</strong></p>
+                        <p>Email: hamad@cohesion-holdings.com</p>
+                        <p>Phone: +965 9999 9999</p>
+                        <p>LinkedIn: /in/hamad-alotaibi</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏢</div>
+                        <h4>Cohesion Holdings</h4>
+                        <p><strong>Parent Company</strong></p>
+                        <p>Kuwait City, Kuwait</p>
+                        <p>Established: 2025</p>
+                        <p>Focus: Innovation & Technology</p>
+                    </div>
+                </div>
+                
+                <h3>Proposed Next Steps</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h5>Immediate (Week 1)</h5>
+                        <p>Schedule strategic partnership discussion meeting with Motawer leadership team.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>Short Term (Weeks 2-4)</h5>
+                        <p>Conduct detailed due diligence, finalize partnership terms, and sign strategic partnership agreement.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>Medium Term (Months 2-3)</h5>
+                        <p>Begin platform development integration, establish joint governance structure, and launch pilot program.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h5>Long Term (Months 4-12)</h5>
+                        <p>Full platform launch, scale operations, measure impact, and prepare for regional expansion.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-ar hidden">
+                <h3>الخطوات المقترحة التالية</h3>
+                <p>نحن مستعدون لبدء مناقشات الشراكة الاستراتيجية فوراً ونتطلع إلى العمل مع فريق مطور لبناء مستقبل الابتكار في الكويت.</p>
+            </div>
+            
+            <div class="cta-section">
+                <a href="https://wa.me/96599999999" class="cta-button whatsapp" target="_blank" data-en="Contact via WhatsApp" data-ar="التواصل عبر واتساب">Contact via WhatsApp</a>
+                <a href="mailto:hamad@cohesion-holdings.com" class="cta-button secondary" data-en="Send Email" data-ar="إرسال بريد إلكتروني">Send Email</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer style="text-align: center; padding: 40px 0; border-top: 1px solid rgba(39, 98, 212, 0.2); margin-top: 60px;">
+            <p data-en="© 2025 powered by Cohesion Holdings. All rights reserved." data-ar="© 2025 مدعوم من كوهيجن هولدنجز. جميع الحقوق محفوظة.">© 2025 powered by Cohesion Holdings. All rights reserved.</p>
+            <p style="margin-top: 10px; color: #b0b0b0;" data-en="Strategic Partnership Proposal for Motawer Program" data-ar="مقترح الشراكة الاستراتيجية لبرنامج مطور">Strategic Partnership Proposal for Motawer Program</p>
+        </footer>
+    </div>
+
+    <script>
+        // Language switching functionality
+        function switchLanguage(lang) {
+            const langBtns = document.querySelectorAll('.lang-btn');
+            const contentEn = document.querySelectorAll('.content-en');
+            const contentAr = document.querySelectorAll('.content-ar');
+            const elementsWithLangData = document.querySelectorAll('[data-en][data-ar]');
+            
+            // Update button states
+            langBtns.forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`[onclick="switchLanguage('${lang}')"]`).classList.add('active');
+            
+            // Update document direction and language
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            // Show/hide content sections
+            if (lang === 'ar') {
+                contentEn.forEach(el => el.classList.add('hidden'));
+                contentAr.forEach(el => el.classList.remove('hidden'));
+            } else {
+                contentAr.forEach(el => el.classList.add('hidden'));
+                contentEn.forEach(el => el.classList.remove('hidden'));
+            }
+            
+            // Update text content for elements with language data
+            elementsWithLangData.forEach(el => {
+                if (el.dataset[lang]) {
+                    el.textContent = el.dataset[lang];
+                }
+            });
+        }
+
+        // Tab functionality
+        function showTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all tab buttons
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-item').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        function handleScrollAnimation() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Initialize animations
+        window.addEventListener('scroll', handleScrollAnimation);
+        window.addEventListener('load', handleScrollAnimation);
+
+        // Mobile menu handling
+        function handleMobileMenu() {
+            const nav = document.querySelector('.nav');
+            const languageToggle = document.querySelector('.language-toggle');
+            
+            if (window.innerWidth <= 768) {
+                nav.style.position = 'relative';
+                nav.style.top = '0';
+                nav.style.right = '0';
+                nav.style.flexDirection = 'row';
+                nav.style.justifyContent = 'center';
+                nav.style.marginBottom = '20px';
+                nav.style.overflowX = 'auto';
+                
+                languageToggle.style.position = 'relative';
+                languageToggle.style.top = '0';
+                languageToggle.style.right = '0';
+                languageToggle.style.margin = '20px auto';
+            }
+        }
+
+        window.addEventListener('resize', handleMobileMenu);
+        window.addEventListener('load', handleMobileMenu);
+    </script>
+</body>
+</html>
+
